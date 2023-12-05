@@ -157,6 +157,7 @@
             Controls.Add(txt3);
             Controls.Add(txtTaiKhoan);
             Name = "DangNhap_Frm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DangNhap_Form";
             Load += DangNhap_Frm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

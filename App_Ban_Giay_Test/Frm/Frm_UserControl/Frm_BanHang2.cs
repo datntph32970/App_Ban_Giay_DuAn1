@@ -273,7 +273,7 @@ namespace App_Ban_Giay_Test.Frm.Frm_UserControl
                 {
                     var result = _Ser_HoaDon.Them(new Hoadon()
                     {
-                        Mataikhoan = formDangNhap.idTaiKhoan,
+                        Mataikhoan = LoginManager.Instance.IdTaiKhoan,
                         Mauudai = objUuDai.Mauudai == null ? 1 : objUuDai.Mauudai,
                         Makhachhang = 1,
                         Mahinhthucthanhtoan = 1,
@@ -327,7 +327,7 @@ namespace App_Ban_Giay_Test.Frm.Frm_UserControl
             var Obj = _Ser_KhachHang.GetAllKhachhang(null).FirstOrDefault(x => x.Makhachhang == id);
             txtMaKhachHang.Text = Obj.Makhachhang.ToString();
             txtTenKhachHang.Text = Obj.Tenkhachhang.ToString();
-            txtMaNhanVien.Text = formDangNhap.idTaiKhoan.ToString();
+            txtMaNhanVien.Text = LoginManager.Instance.IdTaiKhoan.ToString();
             txtDiemKH.Text = Obj.Diemkhachhang == null ? "0 điểm" : Obj.Diemkhachhang.ToString() + " điểm";
         }
         private void btnXoa_Click(object sender, EventArgs e)
@@ -766,7 +766,6 @@ namespace App_Ban_Giay_Test.Frm.Frm_UserControl
             }
             return 0;
         }
-
         private void btnTimKiemHoaDon_Click(object sender, EventArgs e)
         {
         }

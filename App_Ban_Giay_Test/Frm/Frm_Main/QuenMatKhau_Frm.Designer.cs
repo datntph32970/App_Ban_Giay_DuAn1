@@ -209,6 +209,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupXacNhan);
             Name = "QuenMatKhau_Frm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Quên Mật Khẩu";
             FormClosed += QuenMatKhau_Frm_FormClosed;
             Load += QuenMatKhau_Frm_Load;

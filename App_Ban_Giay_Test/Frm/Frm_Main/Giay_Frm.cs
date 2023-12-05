@@ -157,7 +157,7 @@ namespace PRL.Form
         }
         private bool CheckTextbox()
         {
-            if (txtTen.Text == "" || frm_DangNhap.idTaiKhoan == 0)
+            if (txtTen.Text == "" || LoginManager.Instance.IdTaiKhoan == 0)
             {
                 return false;
             }

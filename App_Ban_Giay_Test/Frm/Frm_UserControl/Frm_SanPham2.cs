@@ -239,8 +239,8 @@ namespace App_Ban_Giay_Test.Frm.Frm_UserControl
                             Makieudang = (int)cbbTenKieuDang.SelectedValue,
                             Soluongcon = int.Parse(txtSoLuong.Text),
                             Ngaytao = dateTime,
-                            Nguoitao = formDangNhap.idTaiKhoan,
-                            Nguoisua = formDangNhap.idTaiKhoan,
+                            Nguoitao = LoginManager.Instance.IdTaiKhoan,
+                            Nguoisua = LoginManager.Instance.IdTaiKhoan,
                             Gia = double.Parse(txtGia.Text),
                             Mota = txtMoTa.Text,
                             Trangthai = true
@@ -287,7 +287,7 @@ namespace App_Ban_Giay_Test.Frm.Frm_UserControl
                     objGiay.Mathuonghieu = (int)cbbTenThuongHieu.SelectedValue;
                     objGiay.Makieudang = (int)cbbTenKieuDang.SelectedValue;
                     objGiay.Soluongcon = int.Parse(txtSoLuong.Text);
-                    objGiay.Nguoisua = formDangNhap.idTaiKhoan;
+                    objGiay.Nguoisua = LoginManager.Instance.IdTaiKhoan;
                     objGiay.Ngaysua = dateTime;
                     objGiay.Gia = double.Parse(txtGia.Text);
                     objGiay.Mota = txtMoTa.Text;
@@ -408,7 +408,7 @@ namespace App_Ban_Giay_Test.Frm.Frm_UserControl
                 MessageBox.Show("Vui lòng nhập mô tả không quá 200 từ"); checkedTexbox = false;
 
             }
-            else if (formDangNhap.idTaiKhoan == 0)
+            else if (LoginManager.Instance.IdTaiKhoan == 0)
             {
                 MessageBox.Show("Lỗi không nhận dạng được tài khoản đang sử dụng"); checkedTexbox = false;
 

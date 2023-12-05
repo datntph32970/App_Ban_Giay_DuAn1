@@ -1,6 +1,7 @@
 ﻿using App_Ban_Giay_Test;
 using BUS.Services;
 using DAL.Models.DomainClass;
+using DAL.Models.ModelRefer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,9 @@ namespace PRL.Frm_Main
     {
         TaiKhoanService _Ser_TaiKhoan = new TaiKhoanService();
         List<Taikhoan> _lstTaiKhoan = new List<Taikhoan>();
-        public int idTaiKhoan;
-        public int maChucVu;
-        public string hoVaTen;
+        int idTaiKhoan;
+        string hoVaTen;
+        int maChucVu;
         public DangNhap_Frm()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace PRL.Frm_Main
                     idTaiKhoan = user.Mataikhoan;
                     maChucVu = user.Machucvu;
                     hoVaTen = user.Hovaten;
+                    LoginManager.Instance.UpdateLoginInfo(user.Mataikhoan, user.Machucvu, user.Hovaten);
                     return true;
                 }
             }

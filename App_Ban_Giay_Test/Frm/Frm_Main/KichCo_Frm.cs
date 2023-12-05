@@ -233,7 +233,7 @@ namespace PRL
         }
         private bool CheckTextbox()
         {
-            if (txtTen.Text == "" || txtMoTa.Text == "" || frm_DangNhap.idTaiKhoan == 0)
+            if (txtTen.Text == "" || txtMoTa.Text == "" || LoginManager.Instance.IdTaiKhoan == 0)
             {
                 return false;
             }

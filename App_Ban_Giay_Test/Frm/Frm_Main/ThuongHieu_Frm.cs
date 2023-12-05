@@ -253,7 +253,7 @@ namespace PRL
                 MessageBox.Show("Vui lòng nhập mô tả không quá 200 từ"); checkedTexbox = false;
 
             }
-            else if(frm_DangNhap.idTaiKhoan == 0)
+            else if(LoginManager.Instance.IdTaiKhoan == 0)
             {
                 MessageBox.Show("Lỗi không nhận dạng được tài khoản đang sử dụng"); checkedTexbox = false;
 

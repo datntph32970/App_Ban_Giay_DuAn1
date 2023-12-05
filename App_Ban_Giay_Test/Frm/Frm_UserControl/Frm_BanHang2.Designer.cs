@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dtgSanpham = new DataGridView();
             cboxDungDiemKH = new CheckBox();
             groupBox3 = new GroupBox();
@@ -144,10 +146,11 @@
             // 
             // txtIDHoaDonChiTiet_Checked
             // 
+            txtIDHoaDonChiTiet_Checked.BorderStyle = BorderStyle.None;
             txtIDHoaDonChiTiet_Checked.Enabled = false;
             txtIDHoaDonChiTiet_Checked.Location = new Point(477, 15);
             txtIDHoaDonChiTiet_Checked.Name = "txtIDHoaDonChiTiet_Checked";
-            txtIDHoaDonChiTiet_Checked.Size = new Size(100, 23);
+            txtIDHoaDonChiTiet_Checked.Size = new Size(100, 16);
             txtIDHoaDonChiTiet_Checked.TabIndex = 9;
             // 
             // dtgGiohang
@@ -165,6 +168,8 @@
             // 
             // btnChonTatCa
             // 
+            btnChonTatCa.FlatAppearance.BorderSize = 0;
+            btnChonTatCa.FlatStyle = FlatStyle.System;
             btnChonTatCa.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnChonTatCa.Location = new Point(692, 11);
             btnChonTatCa.Name = "btnChonTatCa";
@@ -176,6 +181,8 @@
             // 
             // btnXoa
             // 
+            btnXoa.FlatAppearance.BorderSize = 0;
+            btnXoa.FlatStyle = FlatStyle.System;
             btnXoa.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnXoa.Location = new Point(583, 11);
             btnXoa.Name = "btnXoa";
@@ -187,8 +194,10 @@
             // 
             // btnThanhToan
             // 
+            btnThanhToan.FlatAppearance.BorderSize = 0;
+            btnThanhToan.FlatStyle = FlatStyle.System;
             btnThanhToan.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThanhToan.Location = new Point(24, 647);
+            btnThanhToan.Location = new Point(33, 647);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(209, 39);
             btnThanhToan.TabIndex = 4;
@@ -207,6 +216,7 @@
             // 
             // txtGhiChu
             // 
+            txtGhiChu.BorderStyle = BorderStyle.None;
             txtGhiChu.Location = new Point(24, 517);
             txtGhiChu.Multiline = true;
             txtGhiChu.Name = "txtGhiChu";
@@ -215,27 +225,30 @@
             // 
             // txtDiemKH
             // 
+            txtDiemKH.BorderStyle = BorderStyle.None;
             txtDiemKH.Enabled = false;
             txtDiemKH.Location = new Point(86, 272);
             txtDiemKH.Name = "txtDiemKH";
-            txtDiemKH.Size = new Size(156, 23);
+            txtDiemKH.Size = new Size(156, 16);
             txtDiemKH.TabIndex = 2;
             txtDiemKH.TextChanged += txtDiemKH_TextChanged;
             // 
             // txtSoTienNhan
             // 
+            txtSoTienNhan.BorderStyle = BorderStyle.None;
             txtSoTienNhan.Location = new Point(115, 311);
             txtSoTienNhan.Name = "txtSoTienNhan";
-            txtSoTienNhan.Size = new Size(127, 23);
+            txtSoTienNhan.Size = new Size(127, 16);
             txtSoTienNhan.TabIndex = 2;
             txtSoTienNhan.TextChanged += txtSoTienNhan_TextChanged;
             // 
             // txtGiaGiam
             // 
+            txtGiaGiam.BorderStyle = BorderStyle.None;
             txtGiaGiam.Enabled = false;
             txtGiaGiam.Location = new Point(95, 195);
             txtGiaGiam.Name = "txtGiaGiam";
-            txtGiaGiam.Size = new Size(147, 23);
+            txtGiaGiam.Size = new Size(147, 16);
             txtGiaGiam.TabIndex = 2;
             // 
             // label12
@@ -310,6 +323,7 @@
             // 
             // txtTimKiemSP
             // 
+            txtTimKiemSP.BorderStyle = BorderStyle.None;
             txtTimKiemSP.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtTimKiemSP.Location = new Point(6, 20);
             txtTimKiemSP.Multiline = true;
@@ -329,6 +343,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(ptbThemHoaDon);
             groupBox1.Controls.Add(btnXoaHoaDon);
             groupBox1.Controls.Add(btnTimKiemHoaDon);
@@ -355,6 +370,8 @@
             // 
             // btnXoaHoaDon
             // 
+            btnXoaHoaDon.FlatAppearance.BorderSize = 0;
+            btnXoaHoaDon.FlatStyle = FlatStyle.System;
             btnXoaHoaDon.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnXoaHoaDon.Location = new Point(659, 22);
             btnXoaHoaDon.Name = "btnXoaHoaDon";
@@ -366,6 +383,8 @@
             // 
             // btnTimKiemHoaDon
             // 
+            btnTimKiemHoaDon.FlatAppearance.BorderSize = 0;
+            btnTimKiemHoaDon.FlatStyle = FlatStyle.System;
             btnTimKiemHoaDon.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnTimKiemHoaDon.Location = new Point(550, 22);
             btnTimKiemHoaDon.Name = "btnTimKiemHoaDon";
@@ -378,9 +397,26 @@
             // dtgHoadon
             // 
             dtgHoadon.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgHoadon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgHoadon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgHoadon.GridColor = SystemColors.InactiveCaption;
             dtgHoadon.Location = new Point(6, 58);
             dtgHoadon.Name = "dtgHoadon";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.LightSlateGray;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgHoadon.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgHoadon.RowHeadersWidth = 51;
             dtgHoadon.RowTemplate.Height = 25;
             dtgHoadon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -399,6 +435,7 @@
             // 
             // txtTimKiemHoaDon
             // 
+            txtTimKiemHoaDon.BorderStyle = BorderStyle.None;
             txtTimKiemHoaDon.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtTimKiemHoaDon.Location = new Point(6, 22);
             txtTimKiemHoaDon.Multiline = true;
@@ -503,6 +540,8 @@
             // 
             // btnTimKiemSP
             // 
+            btnTimKiemSP.FlatAppearance.BorderSize = 0;
+            btnTimKiemSP.FlatStyle = FlatStyle.System;
             btnTimKiemSP.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnTimKiemSP.Location = new Point(550, 20);
             btnTimKiemSP.Name = "btnTimKiemSP";
